@@ -53,12 +53,15 @@
           "srv"
         ],
         "[production]": {
-          "kind": "hana-cloud"
+          "kind": "hana",
+          "model": [
+            "db",
+            "srv"
+          ]
         },
         "credentials": {
           "database": "my.db"
         }
-        
       }
     },
     "hana": {

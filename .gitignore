@@ -31,3 +31,5 @@ mta_archives/
 
 # auto generated wildcard
 mroservice/.env2
+# auto generated wildcard
+productionenabledtest/.env3
