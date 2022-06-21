@@ -12,30 +12,40 @@ entity Roles {
         description : String;
 }
 
-entity Users {
+entity Users_Role_Assign {
     key user : String;
-    key role : String;
+        role : String;
 }
 
-entity MaintainApproval {
+entity User_Approve_Maintain {
     key userid    : String;
     key managerid : String;
 }
 
-entity VendorList : managed {
-    key ManufacturerCode      : String;
-    key LocalManufacturerCode : String;
-    key Country               : String;
-        Status                : String;
+entity Vendor_List : managed {
+    key ID                        : UUID @odata.Type : 'Edm.String';
+    key manufacturerCode          : String;
+    key localManufacturerCode     : String;
+    key country                   : String;
+        manufacturerCodeDesc      : String;
+        localManufacturerCodeDesc : String;
+        countryDesc               : String;
+        initiator                 : String;
+        approver                  : String;
+        Status                    : String;
 }
 
-entity PricingConditions : managed {
-    key ManufacturerCode : String;
-    key Country          : String;
-        LocalCurrency    : Currency;
-        ExchangeRate     : Decimal(2, 2);
-        CountryFactor    : Decimal(2, 2);
-        ValidityStart    : Date;
-        ValidityEnd      : Date;
-        Status           : String;
+entity Pricing_Conditions : managed {
+    key ManufacturerCode     : String;
+    key Country              : String;
+        manufacturerCodeDesc : String;
+        countryDesc          : String;
+        LocalCurrency        : String;
+        ExchangeRate         : Decimal(2, 2);
+        CountryFactor        : Decimal(2, 2);
+        ValidityStart        : Date;
+        ValidityEnd          : Date;
+        initiator            : String;
+        approver             : String;
+        Status               : String;
 }
