@@ -1,6 +1,6 @@
 using ferrero.mro as my from '../db/data-model';
 
-service MroService {
+service MroService @(impl : './cat-service.js') {
     @readonly
     entity Roles             as projection on my.Roles;
 

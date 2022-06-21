@@ -35,3 +35,5 @@ mroservice/.env2
 productionenabledtest/.env3
 # auto generated wildcard
 productionenabledtest/.env2
+# auto generated wildcard
+productionenabledtest/.env1

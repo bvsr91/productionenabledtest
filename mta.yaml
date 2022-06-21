@@ -25,7 +25,7 @@ modules:
         properties:
           srv-url: ${default-url}
     requires:
-      - name: mrodb
+      - name: mrodb_1
 
   - name: mroservice-db-deployer
     type: hdb
@@ -33,10 +33,10 @@ modules:
     parameters:
       buildpack: nodejs_buildpack
     requires:
-      - name: mrodb
+      - name: mrodb_1
 
 resources:
-  - name: mrodb
+  - name: mrodb_1
     type: com.sap.xs.hdi-container
     parameters:
       service: hana # or 'hanatrial' on trial landscapes

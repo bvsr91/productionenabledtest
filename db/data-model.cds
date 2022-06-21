@@ -47,5 +47,6 @@ entity Pricing_Conditions : managed {
         ValidityEnd          : Date;
         initiator            : String;
         approver             : String;
+        ld_initiator         : String;
         Status               : String;
 }
