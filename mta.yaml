@@ -26,6 +26,7 @@ modules:
           srv-url: ${default-url}
     requires:
       - name: mrodb_1
+      # - name: application-logs # to enable application logging for this service
 
   - name: mroservice-db-deployer
     type: hdb
@@ -43,3 +44,9 @@ resources:
       service-plan: hdi-shared
     properties:
       hdi-service-name: ${service-name}
+  # - name: application-logs # to enable application logging
+  #   parameters:
+  #     service-name: application-logs
+  #     service: application-logs
+  #     service-plan: lite
+  #   type: org.cloudfoundry.existing-service
