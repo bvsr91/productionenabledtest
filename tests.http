@@ -1,0 +1,24 @@
+GET http://localhost:4004/mro/Users
+
+###
+# Submit Order
+#
+
+PUT     http://localhost:4004/v2/mro/UpdateUsers('BUTUKSRIN1')
+Content-Type: application/json;IEEE754Compatible=true
+
+{
+    "user":"BUTUKSRIN11",
+    "role":"GCM1"
+}
+
+####
+
+POST http://localhost:4004/mro/Users
+Content-Type: application/json;IEEE754Compatible=true
+
+{
+    "user":"BUTUKSRIN11",
+    "role":"GCM"
+}
+
