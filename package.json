@@ -8,7 +8,6 @@
   "dependencies": {
     "@sap/cds": "^5.9.7",
     "@sap/cds-odata-v2-adapter-proxy": "^1.8.20",
-    "@sap/hana-client": "^2.13.13",
     "express": "^4",
     "hdb": "^0.18.3"
   },
@@ -55,7 +54,7 @@
       }
     },
     "odata": {
-        "version": "v4"
+      "version": "v4"
     },
     "hana": {
       "deploy-format": "hdbtable"

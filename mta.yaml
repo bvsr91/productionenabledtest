@@ -25,8 +25,7 @@ modules:
         properties:
           srv-url: ${default-url}
     requires:
-      - name: mrodb_1
-      # - name: application-logs # to enable application logging for this service
+      - name: mroservice-db
 
   - name: mroservice-db-deployer
     type: hdb
@@ -34,19 +33,13 @@ modules:
     parameters:
       buildpack: nodejs_buildpack
     requires:
-      - name: mrodb_1
+      - name: mroservice-db
 
 resources:
-  - name: mrodb_1
+  - name: mroservice-db
     type: com.sap.xs.hdi-container
     parameters:
       service: hana # or 'hanatrial' on trial landscapes
       service-plan: hdi-shared
     properties:
       hdi-service-name: ${service-name}
-  # - name: application-logs # to enable application logging
-  #   parameters:
-  #     service-name: application-logs
-  #     service: application-logs
-  #     service-plan: lite
-  #   type: org.cloudfoundry.existing-service

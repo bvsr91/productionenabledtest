@@ -14,7 +14,7 @@ entity Roles {
 
 entity Users_Role_Assign {
     key user : String;
-        role : String;
+        role : Association to Roles
 }
 
 entity User_Approve_Maintain {
